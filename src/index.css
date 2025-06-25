@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Neumorphism Shadows */
+@layer utilities {
+  .shadow-neumorphism {
+    box-shadow: 
+      8px 8px 16px rgba(163, 177, 198, 0.6),
+      -8px -8px 16px rgba(255, 255, 255, 0.8);
+  }
+  
+  .shadow-neumorphism-hover {
+    box-shadow: 
+      12px 12px 24px rgba(163, 177, 198, 0.8),
+      -12px -12px 24px rgba(255, 255, 255, 0.9);
+  }
+  
+  .shadow-neumorphism-inset {
+    box-shadow: 
+      inset 4px 4px 8px rgba(163, 177, 198, 0.6),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+  }
+  
+  .shadow-neumorphism-pressed {
+    box-shadow: 
+      inset 8px 8px 16px rgba(163, 177, 198, 0.8),
+      inset -8px -8px 16px rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Custom scrollbar for neumorphism */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 4px rgba(163, 177, 198, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Focus states for accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: rgba(59, 130, 246, 0.5);
+  ring-offset: 2px;
+}
